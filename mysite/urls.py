@@ -18,5 +18,6 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^quotescollector/', include('quotescollector.urls', namespace="quotescollector"))
+    url(r'^quotescollector/', include('quotescollector.urls', namespace="quotescollector")),
+    url(r'^hjquotescollector/', include('hjquotescollector.urls', namespace="hjquotescollector"))
 ]
