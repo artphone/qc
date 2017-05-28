@@ -1,5 +1,9 @@
 Thank you!</br>
 
 {%for q in object_list%}
-	{{q.quote_text}} by {{q.quote_owner}}</br>
+	{%if q.quote_owner == 'HJ'%}
+		{{q.quote_owner}} : <font color = "red">	{{q.quote_text}}</br>	</font>
+	{%else%}
+		{{q.quote_owner}} : {{q.quote_text}} </br>
+	{%endif%}
 {%endfor%}
